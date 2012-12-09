@@ -35,3 +35,14 @@ to either the GNU or POSIX standards, although it is close.
 %doc README AUTHORS ChangeLog NEWS
 %{_includedir}/*
 %{_datadir}/pkgconfig/*.pc
+
+
+%changelog
+* Tue Feb 07 2012 Andrey Bondrov <abondrov@mandriva.org> 1.2.1-2
++ Revision: 771501
+- Drop no longer needed RPM4 junk from spec
+
+* Fri Oct 28 2011 vsinitsyn <vsinitsyn> 1.2.1-1
++ Revision: 707712
+- imported package tclap
+
