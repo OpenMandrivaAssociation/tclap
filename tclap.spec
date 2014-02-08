@@ -1,6 +1,6 @@
 Name:		tclap
 Version:	1.2.1
-Release:	2
+Release:	3
 Summary:	Templatized C++ Command Line Parser
 Group:		System/Libraries
 License:	MIT
