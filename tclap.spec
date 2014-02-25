@@ -6,6 +6,7 @@ Group:		System/Libraries
 License:	MIT
 URL:		http://tclap.sourceforge.net/
 Source0:	http://sourceforge.net/projects/tclap/files/%{name}-%{version}.tar.gz
+Source1:	tclap.rpmlintrc
 BuildArch:	noarch
 Provides:	%{name}-devel = %{version}-%{release}
 
@@ -31,18 +32,6 @@ to either the GNU or POSIX standards, although it is close.
 %make check
 
 %files
-%defattr(-,root,root)
 %doc README AUTHORS ChangeLog NEWS
 %{_includedir}/*
 %{_datadir}/pkgconfig/*.pc
-
-
-%changelog
-* Tue Feb 07 2012 Andrey Bondrov <abondrov@mandriva.org> 1.2.1-2
-+ Revision: 771501
-- Drop no longer needed RPM4 junk from spec
-
-* Fri Oct 28 2011 vsinitsyn <vsinitsyn> 1.2.1-1
-+ Revision: 707712
-- imported package tclap
-
