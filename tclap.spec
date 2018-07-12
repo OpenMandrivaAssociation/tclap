@@ -1,6 +1,6 @@
 Name:		tclap
-Version:	1.2.1
-Release:	11
+Version:	1.2.2
+Release:	1
 Summary:	Templatized C++ Command Line Parser
 Group:		System/Libraries
 License:	MIT
@@ -9,6 +9,7 @@ Source0:	http://sourceforge.net/projects/tclap/files/%{name}-%{version}.tar.gz
 Source1:	tclap.rpmlintrc
 BuildArch:	noarch
 Provides:	%{name}-devel = %{version}-%{release}
+BuildRequires:	doxygen graphviz
 
 %description
 This is a simple C++ library that facilitates parsing command line
@@ -19,19 +20,26 @@ to either the GNU or POSIX standards, although it is close.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
-%makeinstall_std
+%make_install
 
 %__mkdir_p %{buildroot}%{_datadir}/pkgconfig
 %__mv %{buildroot}%{_libdir}/pkgconfig/*.pc %{buildroot}%{_datadir}/pkgconfig/
 
 %check
-%make check
+cd tests
+for i in test*.sh; do
+	if ! ./$i; then
+		echo "Test $i failed"
+		exit 1
+	fi
+done
 
 %files
 %doc README AUTHORS ChangeLog NEWS
 %{_includedir}/*
 %{_datadir}/pkgconfig/*.pc
+%doc %{_docdir}/%{name}
