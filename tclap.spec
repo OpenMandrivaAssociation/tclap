@@ -1,6 +1,6 @@
 Name:		tclap
 Version:	1.2.2
-Release:	2
+Release:	3
 Summary:	Templatized C++ Command Line Parser
 Group:		System/Libraries
 License:	MIT
@@ -31,6 +31,7 @@ to either the GNU or POSIX standards, although it is close.
 
 %check
 cd tests
+export srcdir="`pwd`"
 for i in test*.sh; do
 	if ! ./$i; then
 		echo "Test $i failed"
