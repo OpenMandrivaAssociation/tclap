@@ -4,7 +4,7 @@ Release:	4
 Summary:	Templatized C++ Command Line Parser
 Group:		System/Libraries
 License:	MIT
-URL:		http://tclap.sourceforge.net/
+URL:		https://tclap.sourceforge.net/
 Source0:	http://sourceforge.net/projects/tclap/files/%{name}-%{version}.tar.gz
 Source1:	tclap.rpmlintrc
 BuildArch:	noarch
