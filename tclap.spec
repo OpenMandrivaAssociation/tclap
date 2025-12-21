@@ -9,6 +9,11 @@ Source0:	http://sourceforge.net/projects/tclap/files/%{name}-%{version}.tar.gz
 Source1:	tclap.rpmlintrc
 BuildArch:	noarch
 Provides:	%{name}-devel = %{version}-%{release}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen graphviz
 
 %description
